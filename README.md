@@ -32,8 +32,8 @@ This repository contains scripts and tools to help set up Ubuntu 24.04 on the AS
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/asus-g14-ubuntu-setup.git
-   cd asus-g14-ubuntu-setup
+   git clone https://github.com/dariomncs/asus-ubuntu.git
+   cd asus-ubuntu
    ```
 
 2. **Generate and install ASUS Linux utilities:**
