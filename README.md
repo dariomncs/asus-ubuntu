@@ -76,6 +76,10 @@ Contributions are welcome. If you have improvements or fixes, feel free to open 
 
 If you share these scripts, publish a guide based on them, or build improvements on top of this work, please consider linking back to this repository as the main source. Keeping a single reference point helps others find the latest updates, and contributing fixes or useful improvements back here helps keep the shared solution accurate and up to date for everyone.
 
+### Special Thanks
+
+A big thank you to the [Asus-Linux.org](https://asus-linux.org) project and its contributors. Their outstanding work on open-source ASUS Linux support — including the [`asusctl`](https://gitlab.com/asus-linux/asusctl) and [`supergfxctl`](https://gitlab.com/asus-linux/supergfxctl) utilities — makes running Linux on ASUS hardware a much better experience for everyone.
+
 ---
 
 ## Disclaimer
