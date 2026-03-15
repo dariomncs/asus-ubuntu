@@ -1,11 +1,12 @@
 #!/bin/bash
 # Configuration variables
 
-ASUSCTL_VERSION="6.1.12"
+UBUNTU_VERSION="24.04"
+ASUSCTL_VERSION="6.3.4"
 SUPERGFXCTL_VERSION="5.2.7"
 
 # Builder script for ASUS Ubuntu packages
-# This script builds the asusctl and supergfxctl packages for Ubuntu 24.04
+# This script builds the asusctl and supergfxctl packages for the configured Ubuntu version
 # It uses Docker to create a clean build environment and packages the applications into .deb files.
 
 set -euo pipefail
@@ -82,7 +83,7 @@ function build_package() {
 
   create_dockerfile "$app_name" "$git_url" "$target_version" "$dependencies" "$build_commands" "$additional_files"
 
-  docker build -t "${app_name}-builder" .
+  docker build --build-arg "UBUNTU_VERSION=$UBUNTU_VERSION" -t "${app_name}-builder" .
   cid=$(docker create "${app_name}-builder")
   docker cp "$cid:/target/" .
   docker rm $cid
