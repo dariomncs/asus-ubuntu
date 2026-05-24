@@ -2,7 +2,7 @@
 # Configuration variables
 
 UBUNTU_VERSION="24.04"
-ASUSCTL_VERSION="6.3.4"
+ASUSCTL_VERSION="6.3.7"
 SUPERGFXCTL_VERSION="5.2.7"
 
 # Builder script for ASUS Ubuntu packages
