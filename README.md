@@ -10,7 +10,7 @@ This repository contains scripts and tools to help set up Ubuntu on the ASUS G14
 
 1. **ASUS Linux Utilities Package Generator**  
    Provides a package builder for the following ASUS Linux utilities:
-    - [`asusctl`](https://gitlab.com/asus-linux/asusctl) 
+    - [`asusctl`](https://github.com/OpenGamingCollective/asusctl) 
     - [`supergfxctl`](https://gitlab.com/asus-linux/supergfxctl)
    These are essential tools for managing ASUS laptops on Linux.
 
@@ -78,7 +78,7 @@ If you share these scripts, publish a guide based on them, or build improvements
 
 ### Credits
 
-- [Asus-Linux.org](https://asus-linux.org) — upstream project providing [`asusctl`](https://gitlab.com/asus-linux/asusctl) and [`supergfxctl`](https://gitlab.com/asus-linux/supergfxctl).
+- [Asus-Linux.org](https://asus-linux.org) — upstream project providing [`asusctl`](https://github.com/OpenGamingCollective/asusctl) and [`supergfxctl`](https://gitlab.com/asus-linux/supergfxctl).
 
 ---
 

@@ -1,8 +1,8 @@
 #!/bin/bash
 # Configuration variables
 
-UBUNTU_VERSION="24.04"
-ASUSCTL_VERSION="6.3.7"
+UBUNTU_VERSION="26.04" # Also tested on 24.04
+ASUSCTL_VERSION="6.5.0"
 SUPERGFXCTL_VERSION="5.2.7"
 
 # Builder script for ASUS Ubuntu packages
@@ -63,7 +63,7 @@ RUN fpm -s dir -t deb -C /target \
     --version \$TARGET_VERSION \
     --iteration 1 \
     --description "$app_name is a utility for Linux related to ASUS laptops." \
-    --url "https://gitlab.com/asus-linux/$app_name" \
+    --url "${git_url%.git}" \
     --depends libudev1 $additional_files \
     . \
     && rm -rf /target \
@@ -93,11 +93,11 @@ function build_package() {
 
 # Build asusctl package
 build_package "asusctl" \
-"https://gitlab.com/asus-linux/asusctl.git" \
+"https://github.com/OpenGamingCollective/asusctl.git" \
 "$ASUSCTL_VERSION" \
 "libasound2-dev libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev \
 libx11-dev libfontconfig1-dev libclang-dev libseat-dev libinput-dev libxkbcommon-dev \
-libgbm-dev libgtk-3-dev libpango1.0-dev libgdk-pixbuf-2.0-dev libglib2.0-dev" \
+libgbm-dev libgtk-3-dev libpango1.0-dev libgdk-pixbuf-2.0-dev libglib2.0-dev gettext" \
 "RUN make DESTDIR=/target install" \
 "--depends libgtk-3-0 --depends libpango-1.0-0 --depends libgdk-pixbuf-2.0-0 --depends libglib2.0-0 --depends libclang1 --depends libudev1 --depends libseat1"
 
